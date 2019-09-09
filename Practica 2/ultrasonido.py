@@ -28,9 +28,8 @@ while True:
     while GPIO.input(ECHO)==1:                 #Comprueba si ECHO está en estado alto
         pulse_end = time.time()                  #Guarda el tiempo transcurrido, mientras esta en estado alto
 
-    t = pulse_end - pulse_start                #Se obtienen la duración del pulso, calculando la diferencia entre pulse_start  y pulse_end
-    distancia = t * (V/2)                      #Se multiplica la duración del pulso, por 17150, para obetener la distancia
-    distancia = round(distancia, 2)            #Se redondea a dos decimales
+  #COMPLETAR UNA PARTE DEL CODIGO
+
     if distancia > 2 and distancia < 400:      #Comprueba si la distancia está dentro del rango
         print ("Distancia: ",distancia,"cm")       #Imprime la distancia 
     else:
