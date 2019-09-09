@@ -3,7 +3,7 @@ from email.mime.text import MIMEText
 
 
 msg = MIMEText("Mensaje")
-server = smtplib.SMTP('smtp.gmail.com',587)
+server = smtplib.SMTP('servidor de correo',#Puerto)
 server.starttls()
 server.login('mail@gmail.com','contraseña')
 msg['Subject'] = "Asunto"
