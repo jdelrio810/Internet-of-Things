@@ -1,17 +1,17 @@
 import serial
 import requests
 
-ser = serial.Serial('/dev/"nombre_dispositivo"', 115200)
+arduino = serial.Serial('/dev/"nombre_dispositivo"', 115200)
 
 # loop until manually stopped
 # first flush possibly existing data in the input buffer:
 
-ser.flushInput()
+arduino.flushInput()
 
 while True:
     try:
         # read a single line from the serial interface represented by the ser object
-        lineBytes = ser.readline()
+        lineBytes = arduino.readline()
         # convert Bytes returned by the ser.readline() function to String
         line = lineBytes.decode('utf-8')
         # print the read line to the output
