@@ -1,5 +1,6 @@
 int sensorPin = A0;    
 float sensorValue = 0;  
+float voltaje;
 
 void setup() {
 
@@ -10,7 +11,8 @@ void setup() {
 
 void loop() {
   
-  sensorValue = (3.3*analogRead(sensorPin))/1023;
+  sensorValue = analogRead(sensorPin);
+  voltaje = ?
   Serial.println(sensorValue);
   delay(1000);
   
