@@ -111,6 +111,13 @@ void loop() {
 
     sensorValue = analogRead(sensorPin);
     voltaje = (3.3*(sensorValue)/1023);
+  
+  if(voltaje>3.0){
+    digitalwrite(led1, HIGH);
+    digitalwrite(led1, HIGH);
+    digitalwrite(led1, HIGH);
+    
+  }
     
     // Check if any reads failed and exit early (to try again).
     if (isnan(voltaje)) {
