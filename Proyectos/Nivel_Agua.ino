@@ -3,8 +3,8 @@
 
 // Uncomment one of the lines bellow for whatever DHT sensor type you're using!
 
-const char* ssid = "FAMILIA CADENA";
-const char* password = "Mei481SA";
+const char* ssid = "***********";
+const char* password = "***********";
 
 int TRIG = 5;      // trigger en pin D1 
 int ECO = 4;      // echo en pin D2
@@ -119,12 +119,7 @@ void loop() {
         
   DISTANCIA = DURACION / 58.2;    // distancia medida en centimetros
   Serial.println(DISTANCIA);    // envio de valor de distancia por monitor serial
-  if(DISTANCIA > 30){
-    digitalWrite(lamp,HIGH);
-  }
-  else{
-    digitalWrite(lamp,LOW);
-  }
+ 
   delay(200);       // demora entre datos
     
     // Check if any reads failed and exit early (to try again).
@@ -138,7 +133,7 @@ void loop() {
     
     // Publishes valor del sensor
     client.publish("nivel_agua/distancia",distancia );
-    Serial.print("luz: ");
+    Serial.print("distancia: ");
     Serial.println(distancia);
     delay(500);
     
